@@ -124,8 +124,10 @@
 import requests
 import os
 import numpy as np
+import streamlit as st
 
-API_KEY = os.getenv("OPENWEATHER_API_KEY")
+API_KEY = st.secrets.get("OPENWEATHER_API_KEY")
+# API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
 # =========================
 # SAFE API CALL (NO PRINT)
